@@ -1,0 +1,57 @@
+{
+  "name": "template-typescript",
+  "version": "2.1.0",
+  "description": "The template of TypeScript.",
+  "author": "Kawano Kenichi <kenichi.k.820@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "lint": "eslint --fix --cache ./src",
+    "format": "prettier . --write",
+    "typing": "tsc --project tsconfig.json --pretty --noEmit",
+    "check:all": "npm-run-all -s check:type check:format check:lint",
+    "test": "vitest",
+    "test:cov": "vitest --coverage",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "fp-ts": "^2.16.9",
+    "ts-pattern": "^5.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cspell/eslint-plugin": "^8.14.2",
+    "@eslint/js": "8.x",
+    "@types/eslint__js": "8.x",
+    "@types/node": "20.x",
+    "@types/uuid": "^10.0.0",
+    "dotenv-cli": "^7.4.2",
+    "esbuild-register": "^3.6.0",
+    "eslint": "8.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import-x": "^4.2.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-sonarjs": "^2.0.2",
+    "eslint-plugin-unused-imports": "^4.1.3",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.4.0",
+    "vite": "^5.4.3",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
